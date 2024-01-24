@@ -5,27 +5,21 @@
 //  Created by Ali Tamoor on 24/01/2024.
 //
 
-import Foundation
+import SwiftUI
 
 final class AccountViewModel: ObservableObject {
-    @Published var firstName = ""
-    @Published var lastName = ""
-    @Published var email = ""
-    @Published var date = Date()
 
-    @Published var extraNapkins = false
-    @Published var frequestRefills = false
-    @Published var isAlertShowing = false
-
+    @Published var user = UserModel()
     @Published var alertItem: AlertItem?
-
+    @AppStorage("userData") var userData: Data?
+    
     var isValidForm: Bool {
-        guard !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty  else {
+        guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty  else {
             alertItem = AlertContext.invalidDetails
             return false
         }
         
-        guard email.isValidEmail else {
+        guard user.email.isValidEmail else {
             alertItem = AlertContext.invalidEmail
             return false
         }
@@ -34,6 +28,27 @@ final class AccountViewModel: ObservableObject {
     }
     
     func saveChanges() {
-        isAlertShowing = !isValidForm
+        if !isValidForm {
+            user.isAlertShowing = true
+            return
+        }
+        
+        do {
+            userData = try JSONEncoder().encode(user)
+            alertItem = AlertContext.userSaveSuccess
+        } catch {
+            alertItem = AlertContext.userSaveFailure
+        }
+        
+        user.isAlertShowing = true
+    }
+    
+    func retrieveInfo() {
+        guard let userData = userData else { return }
+        do {
+            user = try JSONDecoder().decode(UserModel.self, from: userData)
+        } catch {
+
+        }
     }
 }

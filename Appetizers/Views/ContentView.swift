@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var itemsInOrderList = OrderModel()
+    
     var body: some View {
         NavigationStack {
             TabView {
@@ -31,6 +34,7 @@ struct ContentView: View {
                     }
             }
             .tint(Color.primaryBrand)
+            .environmentObject(itemsInOrderList)
         }
     }
 }

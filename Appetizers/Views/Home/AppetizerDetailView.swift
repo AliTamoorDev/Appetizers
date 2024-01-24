@@ -9,23 +9,14 @@ import SwiftUI
 
 struct AppetizerDetailView: View {
     
+    @State var isItemAddedToOrderList = false
     @Binding var isShowingDetail: Bool
+    @EnvironmentObject var itemsInOrderList: OrderModel
+
     var appetizer: AppetizerModel
     
     var body: some View {
         VStack {
-            //            AsyncImage(url: URL(string: appetizer.imageURL)) { image in
-            //               image
-            //                    .resizable()
-            //                    .frame( height: 225)
-            //                    .aspectRatio(contentMode: .fit)
-            //            } placeholder: {
-            //                Image("food-placeholder")
-            //                    .resizable()
-            //                    .frame( height: 225)
-            //                    .aspectRatio(contentMode: .fit)
-            //            }
-            
             RemoteImage(url: appetizer.imageURL)
                 .frame(height: 225)
                 .aspectRatio(contentMode: .fit)
@@ -49,7 +40,8 @@ struct AppetizerDetailView: View {
                 
                 Spacer()
                 Button("$\(String(format: "%0.2f", appetizer.price)) -  Add to Order") {
-                    
+                    itemsInOrderList.addToItems(appetizer)
+                    isItemAddedToOrderList = true
                 }
                 .buttonStyle(.borderedProminent)
                 .bold()
@@ -75,6 +67,12 @@ struct AppetizerDetailView: View {
         .cornerRadius(12)
         .padding(.horizontal, 20)
         .shadow(radius: 40)
+        
+        .alert(isPresented: $isItemAddedToOrderList, content: {
+            Alert(title: Text(AlertContext.itemAddedInOrder.title), message: Text(AlertContext.itemAddedInOrder.message), dismissButton: .default(Text("OK")) {
+                isShowingDetail = false
+            })
+        })
     }
 }
 

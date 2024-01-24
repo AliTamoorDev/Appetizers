@@ -39,7 +39,7 @@ struct HomeView: View {
             }
             .blur(radius: isShowingDetail ? 20 : 0)
             
-            .onAppear {
+            .onViewDidLoad {
                 appetizerVM.request = []
                 appetizerVM.fetchAppetizerList()
             }

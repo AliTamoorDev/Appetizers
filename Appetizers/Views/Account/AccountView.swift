@@ -16,14 +16,14 @@ struct AccountView: View {
             VStack {
                 Form {
                     Section("Personal Info") {
-                        TextField("First Name", text: $accountVM.firstName)
-                        TextField("Last Name", text: $accountVM.lastName)
-                        TextField("Email", text: $accountVM.email)
+                        TextField("First Name", text: $accountVM.user.firstName)
+                        TextField("Last Name", text: $accountVM.user.lastName)
+                        TextField("Email", text: $accountVM.user.email)
                             .keyboardType(.emailAddress)
                             .autocorrectionDisabled()
                             .textInputAutocapitalization(.never)
                         
-                        DatePicker("Birthday", selection: $accountVM.date, displayedComponents: .date)
+                        DatePicker("Birthday", selection: $accountVM.user.date, displayedComponents: .date)
                             .tint(.primaryBrand)
                         Button(action: {
                             accountVM.saveChanges()
@@ -33,14 +33,17 @@ struct AccountView: View {
                     }
                     
                     Section("Requests") {
-                        Toggle("Extra Napkins", isOn: $accountVM.extraNapkins)
-                        Toggle("Frequent Refills", isOn: $accountVM.frequestRefills)
+                        Toggle("Extra Napkins", isOn: $accountVM.user.extraNapkins)
+                        Toggle("Frequent Refills", isOn: $accountVM.user.frequestRefills)
                     }
                 }
                 .navigationTitle("Account")
             }
+            .onAppear {
+                accountVM.retrieveInfo()
+            }
         }
-        .alert("Invalid Details", isPresented: $accountVM.isAlertShowing, presenting: accountVM.alertItem) { item in
+        .alert(accountVM.alertItem?.title ?? "", isPresented: $accountVM.user.isAlertShowing, presenting: accountVM.alertItem) { item in
             
         } message: { item in
             Text(item.message)

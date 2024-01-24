@@ -28,8 +28,12 @@ struct AlertContext {
     static var unableToComplete = AlertItem(title: "Server Error",
                                             message: "Unable to complete your request at the time. Please check your network connection.")
     
+    // MARK: - Home View Alerts
+    static var itemAddedInOrder = AlertItem(title: "Appetizer added in Order List", message: "Your Appetizer has been successfully added to Order List")    
     
     // MARK: - Account View Alerts
-    static var invalidDetails = AlertItem(title: "Invalid Details", message: "Please make sure all the fields are filled")
-    static var invalidEmail = AlertItem(title: "Invalid Email", message: "Please enter a valid email")
+    static var invalidDetails = AlertItem(title: "Invalid Details", message: "Please make sure all the fields are filled.")
+    static var invalidEmail = AlertItem(title: "Invalid Email", message: "Please enter a valid email.")
+    static var userSaveSuccess = AlertItem(title: "User Saved", message: "User has been saved successfully.")
+    static var userSaveFailure = AlertItem(title: "Failed to save user", message: "Error occured while saving user. Try again")
 }
