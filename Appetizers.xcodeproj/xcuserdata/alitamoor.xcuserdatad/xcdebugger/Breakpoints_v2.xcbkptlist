@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A84D26C6-09D7-41F4-BA17-3B1C0A6D6DE1"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FE04BA2-6481-4736-9E52-CFB99B3F27DF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appetizers/Network/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getAppetizer(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2FE04BA2-6481-4736-9E52-CFB99B3F27DF - 40e34802e2a2c656"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Appetizers.NetworkManager.getAppetizer(completion: (Swift.Result&lt;Appetizers.AppetizerResponse, Appetizers.APError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Appetizers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/Documents/Self%20Learnings/SwiftUI/Appetizers/Appetizers/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "2FE04BA2-6481-4736-9E52-CFB99B3F27DF - 40e34802e2a2c7d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Appetizers.NetworkManager.getAppetizer(completion: (Swift.Result&lt;Appetizers.AppetizerResponse, Appetizers.APError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Appetizers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/Documents/Self%20Learnings/SwiftUI/Appetizers/Appetizers/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "484">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54DC68B3-B945-4303-9268-4E600EF28012"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appetizers/Network/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getAppetizer(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54DC68B3-B945-4303-9268-4E600EF28012 - 40e34802e2a2c59c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Appetizers.NetworkManager.getAppetizer(completion: (Swift.Result&lt;Appetizers.AppetizerResponse, Appetizers.APError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Appetizers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/Documents/Self%20Learnings/SwiftUI/Appetizers/Appetizers/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "54DC68B3-B945-4303-9268-4E600EF28012 - 40e34802e2a2c518"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Appetizers.NetworkManager.getAppetizer(completion: (Swift.Result&lt;Appetizers.AppetizerResponse, Appetizers.APError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Appetizers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/Documents/Self%20Learnings/SwiftUI/Appetizers/Appetizers/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9CA7D67-9390-4E5E-AB6F-A8079BEF4E12"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appetizers/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D9CA7D67-9390-4E5E-AB6F-A8079BEF4E12 - c0647ebe0f1f4788"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;&gt;)&gt;&gt; in Appetizers.HomeView.body.getter : some"
+                  moduleName = "Appetizers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/Documents/Self%20Learnings/SwiftUI/Appetizers/Appetizers/Views/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "724">
+               </Location>
+               <Location
+                  uuid = "D9CA7D67-9390-4E5E-AB6F-A8079BEF4E12 - 4cfb2cb27bd7dc5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.listStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ListStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;&gt;)&gt;&gt; in Appetizers.HomeView.body.getter : some"
+                  moduleName = "Appetizers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/Documents/Self%20Learnings/SwiftUI/Appetizers/Appetizers/Views/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E247E046-399A-43C0-AC3B-843A7FE835A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Appetizers/ViewModels/AccountViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "saveChanges()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
