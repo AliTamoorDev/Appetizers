@@ -26,17 +26,38 @@ struct RemoteImage: View {
 
 
 // MARK: - ImageLoader Manager
+
+// Using Async/Await
+@MainActor
 final class ImageLoader: ObservableObject {
     
     @Published var image = Image("food-placeholder")
     
     func downloadImage(fromURLString urlString: String) {
-        NetworkManager.shared.downloadImage(fromURLString: urlString) { image in
-            if let img = image {
-                DispatchQueue.main.async {
-                    self.image = Image(uiImage: img)
-                }
+        Task {
+            do {
+                let uiImage = try await NetworkManager.shared.downloadImage(fromURLString: urlString)
+                self.image = Image(uiImage: uiImage)
+            } catch {
+                print("Unable to load image")
             }
         }
     }
 }
+
+// Using Dispatch Queue
+
+//final class ImageLoader: ObservableObject {
+//    
+//    @Published var image = Image("food-placeholder")
+//    
+//    func downloadImage(fromURLString urlString: String) {
+//        NetworkManager.shared.downloadImage(fromURLString: urlString) { image in
+//            if let img = image {
+//                DispatchQueue.main.async {
+//                    self.image = Image(uiImage: img)
+//                }
+//            }
+//        }
+//    }
+//}

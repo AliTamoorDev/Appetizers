@@ -20,6 +20,7 @@ struct HomeView: View {
                     List(appetizerVM.request, id: \.id) { appetizer in
                         //                        NavigationLink(value: appetizer) {
                         AppetizerCell(appetizer: appetizer)
+                            .listRowSeparatorTint(.primaryBrand)
                             .onTapGesture {
                                 isShowingDetail = true
                                 selectedAppetizer = appetizer
@@ -37,7 +38,7 @@ struct HomeView: View {
                     //                AppetizerDetailView(appetizer: item)
                 }
             }
-            .blur(radius: isShowingDetail ? 20 : 0)
+            .blur(radius: isShowingDetail ? 40 : 0)
             
             .onViewDidLoad {
                 appetizerVM.request = []
@@ -60,6 +61,7 @@ struct HomeView: View {
                 ProgressView {
                     Text("Loading")
                 }
+                .scaleEffect(1.5)
             }
         }
     }

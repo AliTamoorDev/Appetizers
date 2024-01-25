@@ -43,9 +43,7 @@ struct AppetizerDetailView: View {
                     itemsInOrderList.addToItems(appetizer)
                     isItemAddedToOrderList = true
                 }
-                .buttonStyle(.borderedProminent)
-                .bold()
-                .tint(Color.primaryBrand)
+                .standardButtonStyle()
                 .padding(.bottom, 30)
             }
         }
@@ -89,7 +87,7 @@ struct NutritionInfoView: View {
             Text(title)
                 .bold()
                 .font(.caption)
-            Text(String(format: "%0.0f", info))
+            Text("\(String(format: "%0.0f", info))g")
                 .foregroundStyle(.secondary)
                 .fontWeight(.semibold)
                 .italic()

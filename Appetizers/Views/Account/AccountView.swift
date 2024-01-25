@@ -10,20 +10,36 @@ import SwiftUI
 struct AccountView: View {
     
     @StateObject var accountVM = AccountViewModel()
-
+    @FocusState var currentFocusedField: inputFields?
+    
+    enum inputFields {
+        case firstName, lastName, email
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
                 Form {
                     Section("Personal Info") {
                         TextField("First Name", text: $accountVM.user.firstName)
+                            .focused($currentFocusedField, equals: .firstName)
+                            .onSubmit { currentFocusedField = .lastName }
+                            .submitLabel(.next)
+                        
                         TextField("Last Name", text: $accountVM.user.lastName)
+                            .focused($currentFocusedField, equals: .lastName)
+                            .onSubmit { currentFocusedField = .email }
+                            .submitLabel(.next)
+
                         TextField("Email", text: $accountVM.user.email)
+                            .focused($currentFocusedField, equals: .email)
+                            .onSubmit { currentFocusedField = nil }
+                            .submitLabel(.continue)
                             .keyboardType(.emailAddress)
                             .autocorrectionDisabled()
                             .textInputAutocapitalization(.never)
                         
-                        DatePicker("Birthday", selection: $accountVM.user.date, displayedComponents: .date)
+                        DatePicker("Birthday", selection: $accountVM.user.date,in: Date().oneHundredYearAgo...Date().eighteenYearsAgo, displayedComponents: .date)
                             .tint(.primaryBrand)
                         Button(action: {
                             accountVM.saveChanges()
@@ -38,6 +54,13 @@ struct AccountView: View {
                     }
                 }
                 .navigationTitle("Account")
+                .toolbar {
+                    ToolbarItem(placement: .keyboard) {
+                        Button("Dismiss") {
+                            currentFocusedField = nil 
+                        }
+                    }
+                }
             }
             .onAppear {
                 accountVM.retrieveInfo()

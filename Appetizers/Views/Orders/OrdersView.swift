@@ -27,9 +27,7 @@ struct OrdersView: View {
                     Button("$\(String(format: "%.2f", itemsInOrderList.totalPrice)) - Place Order") {
                         
                     }
-                    .buttonStyle(.borderedProminent)
-                    .bold()
-                    .tint(Color.primaryBrand)
+                    .standardButtonStyle()
                     .padding(.bottom, 30)
                 }
                 

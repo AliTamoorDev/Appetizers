@@ -15,7 +15,6 @@ struct ContentView: View {
         NavigationStack {
             TabView {
                 HomeView()
-                    .navigationTitle("freis")
                     .tabItem {
                         Text("Home")
                         Image(systemName: "house")
@@ -26,7 +25,8 @@ struct ContentView: View {
                         Text("Orders")
                         Image(systemName: "book.pages")
                     }
-                
+                    .badge(itemsInOrderList.items.count)
+
                 AccountView()
                     .tabItem {
                         Text("Account")

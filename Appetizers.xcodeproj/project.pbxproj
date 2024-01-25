@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321C64F42B6246540030836D /* StandardButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C64F32B6246540030836D /* StandardButtonModifier.swift */; };
+		321C64F72B62A4880030836D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C64F62B62A4880030836D /* DateExtension.swift */; };
 		32A6C00F2B60FBF300B548D8 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6C00E2B60FBF300B548D8 /* AccountViewModel.swift */; };
 		32A6C0112B6114D400B548D8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6C0102B6114D400B548D8 /* StringExtension.swift */; };
 		32A6C0142B611EAB00B548D8 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6C0132B611EAB00B548D8 /* ViewExtension.swift */; };
@@ -25,13 +27,14 @@
 		32E927DE2B50085200ED3FA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E927DD2B50085200ED3FA7 /* Assets.xcassets */; };
 		32E927E12B50085200ED3FA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E927E02B50085200ED3FA7 /* Preview Assets.xcassets */; };
 		32E927E92B50087200ED3FA7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E927E82B50087200ED3FA7 /* HomeView.swift */; };
-		32E927EB2B50087C00ED3FA7 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E927EA2B50087C00ED3FA7 /* AccountView.swift */; };
 		32E927EE2B50089C00ED3FA7 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E927ED2B50089C00ED3FA7 /* OrdersView.swift */; };
 		32F7DE292B515FC500F33328 /* AppetizerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F7DE282B515FC500F33328 /* AppetizerModel.swift */; };
 		32F7DE2C2B51748B00F33328 /* AppetizerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F7DE2B2B51748B00F33328 /* AppetizerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321C64F32B6246540030836D /* StandardButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonModifier.swift; sourceTree = "<group>"; };
+		321C64F62B62A4880030836D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		32A6C00E2B60FBF300B548D8 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		32A6C0102B6114D400B548D8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		32A6C0132B611EAB00B548D8 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -68,11 +71,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321C64F52B6246580030836D /* Custom Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				321C64F32B6246540030836D /* StandardButtonModifier.swift */,
+			);
+			path = "Custom Modifiers";
+			sourceTree = "<group>";
+		};
 		32A6C0122B6114D700B548D8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				32A6C0102B6114D400B548D8 /* StringExtension.swift */,
 				32A6C0132B611EAB00B548D8 /* ViewExtension.swift */,
+				321C64F62B62A4880030836D /* DateExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +124,7 @@
 		32BFFE5B2B5FE84D00F78C16 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				32F7DE2A2B51747800F33328 /* Cell */,
 				32E927E82B50087200ED3FA7 /* HomeView.swift */,
 				32BFFE5D2B5FE87200F78C16 /* AppetizerDetailView.swift */,
 			);
@@ -174,10 +187,10 @@
 				32E7046D2B5EA10C00529F92 /* Helpers */,
 				32A6C0122B6114D700B548D8 /* Extensions */,
 				32BFFE592B5FDA0500F78C16 /* Widgets */,
+				321C64F52B6246580030836D /* Custom Modifiers */,
 				32F7DE272B515FB200F33328 /* Models */,
 				32E927E72B50086400ED3FA7 /* Views */,
 				32E7046A2B5E7B2400529F92 /* ViewModels */,
-				32F7DE2A2B51747800F33328 /* Cell */,
 				32E927D92B50085100ED3FA7 /* AppetizersApp.swift */,
 				32E927DD2B50085200ED3FA7 /* Assets.xcassets */,
 				32E927DF2B50085200ED3FA7 /* Preview Content */,
@@ -210,9 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				32F7DE282B515FC500F33328 /* AppetizerModel.swift */,
-				32C468572B5AA3770062A43C /* APError.swift */,
-				32A6C0152B6131E100B548D8 /* UserModel.swift */,
 				32A6C01A2B614B5A00B548D8 /* OrderModel.swift */,
+				32A6C0152B6131E100B548D8 /* UserModel.swift */,
+				32C468572B5AA3770062A43C /* APError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,7 +311,6 @@
 				32F7DE292B515FC500F33328 /* AppetizerModel.swift in Sources */,
 				32A6C00F2B60FBF300B548D8 /* AccountViewModel.swift in Sources */,
 				32C468582B5AA3770062A43C /* APError.swift in Sources */,
-				32E927EB2B50087C00ED3FA7 /* AccountView.swift in Sources */,
 				32A6C0112B6114D400B548D8 /* StringExtension.swift in Sources */,
 				32BFFE552B5FAC9400F78C16 /* RemoteImage2.swift in Sources */,
 				32C468562B5AA1E30062A43C /* NetworkManager.swift in Sources */,
@@ -307,10 +319,12 @@
 				32E927DA2B50085100ED3FA7 /* AppetizersApp.swift in Sources */,
 				32A6C0182B61463300B548D8 /* EmptyStateAppetizer.swift in Sources */,
 				32BFFE5E2B5FE87200F78C16 /* AppetizerDetailView.swift in Sources */,
+				321C64F42B6246540030836D /* StandardButtonModifier.swift in Sources */,
 				32A6C01B2B614B5A00B548D8 /* OrderModel.swift in Sources */,
 				32F7DE2C2B51748B00F33328 /* AppetizerCell.swift in Sources */,
 				32E7046C2B5E7B3B00529F92 /* AppetizerViewModel.swift in Sources */,
 				32E7046F2B5EA10C00529F92 /* Alert.swift in Sources */,
+				321C64F72B62A4880030836D /* DateExtension.swift in Sources */,
 				32A6C0162B6131E100B548D8 /* UserModel.swift in Sources */,
 				32A6C0142B611EAB00B548D8 /* ViewExtension.swift in Sources */,
 				32E927E92B50087200ED3FA7 /* HomeView.swift in Sources */,
