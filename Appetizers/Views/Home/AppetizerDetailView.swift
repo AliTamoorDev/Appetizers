@@ -32,9 +32,9 @@ struct AppetizerDetailView: View {
                     .font(.body)
                 
                 HStack(spacing: 30) {
-                    NutritionInfoView(title: "Calories", info: appetizer.calories)
-                    NutritionInfoView(title: "Carbs", info: appetizer.carbs)
-                    NutritionInfoView(title: "Proteins", info: appetizer.protein)
+                    NutritionInfoView(title: "Calories", info: "\(appetizer.calories)")
+                    NutritionInfoView(title: "Carbs", info: "\(appetizer.carbs) g")
+                    NutritionInfoView(title: "Proteins", info: "\(appetizer.protein) g")
                 }
                 .padding()
                 
@@ -80,14 +80,16 @@ struct AppetizerDetailView: View {
 
 struct NutritionInfoView: View {
     var title: String
-    var info: Double
+    var info: String
     
     var body: some View {
         VStack {
             Text(title)
                 .bold()
                 .font(.caption)
-            Text("\(String(format: "%0.0f", info))g")
+            
+//            Text("\(String(format: "%0.0f", info))g")
+            Text(info)
                 .foregroundStyle(.secondary)
                 .fontWeight(.semibold)
                 .italic()

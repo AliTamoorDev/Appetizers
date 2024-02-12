@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		321C64F42B6246540030836D /* StandardButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C64F32B6246540030836D /* StandardButtonModifier.swift */; };
 		321C64F72B62A4880030836D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C64F62B62A4880030836D /* DateExtension.swift */; };
+		32847B142B63902600EA10BD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E927EA2B50087C00ED3FA7 /* AccountView.swift */; };
 		32A6C00F2B60FBF300B548D8 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6C00E2B60FBF300B548D8 /* AccountViewModel.swift */; };
 		32A6C0112B6114D400B548D8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6C0102B6114D400B548D8 /* StringExtension.swift */; };
 		32A6C0142B611EAB00B548D8 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6C0132B611EAB00B548D8 /* ViewExtension.swift */; };
@@ -312,6 +313,7 @@
 				32A6C00F2B60FBF300B548D8 /* AccountViewModel.swift in Sources */,
 				32C468582B5AA3770062A43C /* APError.swift in Sources */,
 				32A6C0112B6114D400B548D8 /* StringExtension.swift in Sources */,
+				32847B142B63902600EA10BD /* AccountView.swift in Sources */,
 				32BFFE552B5FAC9400F78C16 /* RemoteImage2.swift in Sources */,
 				32C468562B5AA1E30062A43C /* NetworkManager.swift in Sources */,
 				32E927DC2B50085100ED3FA7 /* ContentView.swift in Sources */,
@@ -457,6 +459,7 @@
 		32E927E52B50085200ED3FA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +489,7 @@
 		32E927E62B50085200ED3FA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

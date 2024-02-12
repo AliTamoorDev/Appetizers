@@ -14,9 +14,9 @@ struct AppetizerModel: Decodable, Identifiable, Hashable {
     let description: String
     let price: Double
     let imageURL: String
-    let protein: Double
-    let carbs: Double
-    let calories: Double
+    let protein: Int
+    let carbs: Int
+    let calories: Int
 }
 
 struct AppetizerResponse: Decodable {
